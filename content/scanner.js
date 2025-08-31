@@ -48,5 +48,12 @@
 
   autoScroll(() => {
     window.__SCHEMA_CRAFT_DATA__ = extractData();
+
+  });
+  // Listen for messages from popup
+  chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+    if (request.action === 'scanPage') {
+      sendResponse({ data: window.__SCHEMA_CRAFT_DATA__ || extractData() });
+    }
   });
 })();
