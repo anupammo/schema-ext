@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <h1>Schema Craft</h1>
+  <select id="schemaType">
+    <option value="article">Article</option>
+    <option value="breadcrumb">Breadcrumb</option>
+    <option value="faq">FAQ</option>
+    <option value="localBusiness">Local Business</option>
+    <option value="organization">Organization</option>
+    <option value="profile">Profile Page</option>
+  </select>
+  <button id="scanBtn">Auto Detect</button>
+  <div id="formContainer"></div>
+  <pre id="output"></pre>
+  <button id="copyBtn">Copy JSON-LD</button>
+  <script src="../utils/dummyData.js"></script>
+  <script src="../content/schemaTemplates.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
